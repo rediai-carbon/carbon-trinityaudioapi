@@ -87,6 +87,10 @@ This pipeline automates handling open pull requests (PRs) when new commits are p
 
 This setup ensures all PRs remain up-to-date with the latest changes from the target branch.
 
+## Linux configure
+
+The project is an `INTERFACE` library. With registry pin `7b2c2b56dc4d5e0f1f4886539f570e2d94b2b46c`, CMake configures and the interface target builds on Linux. The public headers are not independently compilable in this repository: they use `BLUE_INTERFACE`, `IRoot`, and `Vector3`, which come from Carbon Blue and are not dependencies of this package. There is no runtime test to add here without that type system.
+
 ## 📄 License and Legal Notices
 
 © 2026 CCP Games 
